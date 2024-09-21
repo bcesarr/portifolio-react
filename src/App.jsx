@@ -2,32 +2,72 @@
 import styles from './App.module.css';
 
 // Importando images
-import LogoDefault from './assets/logo-default.svg';
-import LogoOutline from './assets/logo-outline.svg';
+import { LogoDefault, LogoOutline, ArrowDown, ArrowUp, IconGithub, IconFigma, IconDribble, ImagePeaple, RectanglePink } from './assets/images';
 
 function App() {
+  
   return (
     // Utilizamos chaves "{}" ao invés de aspas simples - '' no nome das classes, por que estamos utilizando o "App.modules.css"
-    <div className={styles.portifolioContainer}> 
+    <div className={styles.portifolioContainer}>
+
       <header className={styles.header}>
         <div className={styles.headerTitle}>
           
           <img src={LogoDefault} alt="Imagem do logo" />
           
           <h1>Bruno</h1>
-
-          <nav>
-            <ul>
-              <a href="#">Home</a>
-              <a href="#">Works</a>
-              <a href="#">About-me</a>
-              <a href="#">Contacts</a>
-            </ul>
-          </nav>
-
-
         </div>
+
+        <nav className={styles.nav}>
+          <ul>
+            <li><a href="#"><span>#</span>home</a></li>
+            <li><a href="#"><span>#</span>works</a></li>
+            <li><a href="#"><span>#</span>about-me</a></li>
+            <li><a href="#"><span>#</span>contacts</a></li>
+
+            <select>
+              <option value="EN">EN</option>
+              <option value="PT-BR">PT</option>
+              <img src={ArrowDown} alt="Icone de setinha para baixo" />
+            </select>
+          </ul>
+        </nav>
       </header>
+
+      <aside className={styles.asideMedia}>
+        <div className={styles.line}></div>
+          <a href="#">
+            <img src={IconGithub} alt="Icone do Github" />  
+          </a>
+          
+          <a href="#">
+            <img src={IconFigma} alt="Icone do Dribble" />  
+          </a>
+
+          <a href="#">
+            <img src={IconDribble} alt="Icone do Figma" />
+          </a>
+      </aside>
+
+      <main className={styles.hero}>
+        <section className={styles.heroDescription}>
+          <h2><span>Elias is a</span> web designer <span>and</span> front-end developer</h2>
+
+          <p>He crafts responsive websites where technologies meet creativity</p>
+
+          <button type='button'>Contact me!!</button>
+        </section>
+
+        <section className={styles.heroImage}>
+          <img src={ImagePeaple} alt="Imagem de uma pessoa" />
+          <div className={styles.heroWorking}>
+            <img src={RectanglePink} alt="Imagem de um quadrado rosa" />
+            <p>Currently working on <span>Portfolio</span></p>
+          </div>
+
+        </section>
+      </main>
+
     </div>
   );
 }

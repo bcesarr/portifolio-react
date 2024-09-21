@@ -6,6 +6,12 @@
     --white-color: #FFFFFF;
 }
 
+/* Todo o corpo da página */
+/* body {
+    background-color: var(--background-color);
+} */
+
+/* Div global onde vai o header e tudo dentro */
 .portifolioContainer {
     width: 100%;
     display: flex;
@@ -14,16 +20,19 @@
     background-color: var(--background-color);
 }
 
+/* Todo o header - é necessario colocar class aqui, para poder entrar no "App.module.css" */
 .header {
     width: 1024px;
     height: 61px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    padding-bottom: 8px;
 }
 
+/* Logo e titulo */
 .headerTitle {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +47,148 @@
 
 /* Nome do lado da imagem do logo */
 .headerTitle h1 {
+    margin: 0;
     font-size: 16px;
     font-weight: 700;
-    color: white;
+    color: var(--white-color);
+}
+
+/* Links */
+.nav ul {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 32px;
+}
+
+/* Tag */
+.nav a {
+    font-size: 16px;
+    color: var(--gray-color);
+    text-decoration: none;
+}
+
+/* Efeito ao passar o mouse */
+.nav a:hover {
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+/* Hashtag */
+.nav span {
+    color: var(--purple-color);
+}
+
+/* Botão */
+.nav select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-color);
+    background-color: transparent;
+    border: none;
+    height: 21px;
+    gap: 4px;
+}
+
+/* Div dos icones do lado superior esquerdo da pagina */
+.asideMedia {
+    position: absolute;
+    top: 0;
+    left: 17px;
+    width: 32px;
+    height: 311px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Linha dos icones do lado superior esquerdo da página */
+.line {
+    width: 1px;
+    height: 191px;
+    background-color: var(--gray-color);
+}
+
+/* // ---------- Hero ---------- \\ */
+
+.hero {
+    width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 62px;
+    gap: 18px;
+}
+
+.heroDescription h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--purple-color);
+}
+
+.heroDescription p {
+    width: 463px;
+    font-size: 16px;
+    color: var(--gray-color);
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.heroDescription span {
+    color: var(--white-color);
+}
+
+.heroDescription button {
+    width: 148px;
+    height: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: var(--white-color);
+    border: 1px solid var(--purple-color);
+    background-color: transparent;
+}
+
+.heroImage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroImage img {
+    width: 469px;
+    height: 386px;
+}
+
+.heroWorking {
+    width: 402px;
+    height: 37px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: 1px solid var(--white-color);
+    padding-left: 8px;
+    gap: 10px;
+}
+
+.heroWorking img {
+    width: 16px;
+    height: 16px;
+}
+
+.heroWorking p {
+    font-size: 16px;
+    color: var(--gray-color);
+}
+
+.heroWorking span {
+    color: var(--white-color);
+    font-weight: 600;
 }
