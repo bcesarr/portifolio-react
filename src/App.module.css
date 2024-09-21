@@ -1,0 +1,44 @@
+/* Pseudoclasse - Utilizamos isso para poder facilitar ao colocar uma cor no projeto, bastando colcoar "var()" e o sistema vai dar as cores */
+:root {
+    --purple-color: #C778DD;
+    --gray-color: #ABB2BF;
+    --background-color: #282C33;
+    --white-color: #FFFFFF;
+}
+
+.portifolioContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.header {
+    width: 1024px;
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.headerTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Imagem do logo */
+.headerTitle img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Nome do lado da imagem do logo */
+.headerTitle h1 {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
