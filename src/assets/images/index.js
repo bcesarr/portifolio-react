@@ -8,3 +8,5 @@ export {default as IconFigma} from './icons/icon-figma.svg';
 export {default as IconDribble} from './icons/icon-dribble.svg';
 export {default as ImagePeaple} from './image-peaple.svg';
 export {default as RectanglePink} from './image-rectangle-pink.svg';
+export {default as Aspas} from './“ - aspas.svg';
+export {default as RectangleOutlineSmall} from './rectangle-outiline-small.svg';

@@ -7,9 +7,9 @@
 }
 
 /* Todo o corpo da página */
-/* body {
+body {
     background-color: var(--background-color);
-} */
+}
 
 /* Div global onde vai o header e tudo dentro */
 .portifolioContainer {
@@ -83,15 +83,32 @@
 
 /* Botão */
 .nav select {
+    height: 21px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--gray-color);
     background-color: transparent;
     border: none;
-    height: 21px;
+    outline: 2px solid var(--purple-color);
+    border-radius: 5px;
     gap: 4px;
 }
+
+.nav select:hover {
+    color: var(--white-color);
+}
+
+.nav select option {
+    color: var(--gray-color);
+    background-color: var(--background-color);
+}
+
+.nav select option:hover {
+    color: var(--white-color);
+}
+
+
 
 /* Div dos icones do lado superior esquerdo da pagina */
 .asideMedia {
@@ -192,3 +209,6 @@
     color: var(--white-color);
     font-weight: 600;
 }
+
+/* // ---------- Seção - Frase ---------- \\ */
+

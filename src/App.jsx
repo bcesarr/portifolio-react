@@ -2,7 +2,7 @@
 import styles from './App.module.css';
 
 // Importando images
-import { LogoDefault, LogoOutline, ArrowDown, ArrowUp, IconGithub, IconFigma, IconDribble, ImagePeaple, RectanglePink } from './assets/images';
+import { LogoDefault, LogoOutline, ArrowDown, ArrowUp, IconGithub, IconFigma, IconDribble, ImagePeaple, RectanglePink, Aspas, RectangleOutlineSmall } from './assets/images';
 
 function App() {
   
@@ -67,6 +67,21 @@ function App() {
 
         </section>
       </main>
+
+      <section className={styles.phraseContainer}>
+        <img src={Aspas} alt="Imagem de aspas" />
+        
+        <div className={styles.phraseContent}>
+          <p>With great power comes great electricity bill</p>
+        </div>
+
+        <img src={Aspas} alt="Imagem de aspas" />
+
+        <div className={styles.authorPhrase}>
+          <p>- Dr. Who</p>
+        </div>
+
+      </section>
 
     </div>
   );
