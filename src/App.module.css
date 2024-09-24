@@ -27,6 +27,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
     padding-bottom: 8px;
 }
 
@@ -47,10 +48,10 @@ body {
 
 /* Nome do lado da imagem do logo */
 .headerTitle h1 {
-    margin: 0;
     font-size: 16px;
     font-weight: 700;
     color: var(--white-color);
+    margin: 0;
 }
 
 /* Links */
@@ -72,8 +73,8 @@ body {
 
 /* Efeito ao passar o mouse */
 .nav a:hover {
-    color: var(--white-color);
     font-weight: 500;
+    color: var(--white-color);
 }
 
 /* Hashtag */
@@ -81,7 +82,7 @@ body {
     color: var(--purple-color);
 }
 
-/* Botão */
+/* Botão de Idiomas */
 .nav select {
     height: 21px;
     display: flex;
@@ -90,8 +91,8 @@ body {
     color: var(--gray-color);
     background-color: transparent;
     border: none;
-    outline: 2px solid var(--purple-color);
     border-radius: 5px;
+    outline: 2px solid var(--purple-color);
     gap: 4px;
 }
 
@@ -109,18 +110,17 @@ body {
 }
 
 
-
 /* Div dos icones do lado superior esquerdo da pagina */
 .asideMedia {
-    position: absolute;
-    top: 0;
-    left: 17px;
     width: 32px;
     height: 311px;
-    gap: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: -145px;
+    gap: 8px;
 }
 
 /* Linha dos icones do lado superior esquerdo da página */
@@ -130,8 +130,9 @@ body {
     background-color: var(--gray-color);
 }
 
-/* // ---------- Hero ---------- \\ */
 
+/* // ---------- Hero ---------- \\ */
+/* Toda a Seção do Hero */
 .hero {
     width: 1024px;
     display: flex;
@@ -172,6 +173,7 @@ body {
     background-color: transparent;
 }
 
+/* Imagem do Hero */
 .heroImage {
     display: flex;
     flex-direction: column;
@@ -184,17 +186,19 @@ body {
     height: 386px;
 }
 
+/* Div do Comentário Abaixo da Frase */
 .heroWorking {
     width: 402px;
     height: 37px;
     display: flex;
     justify-content: left;
     align-items: center;
-    border: 1px solid var(--white-color);
+    border: 1px solid var(--gray-color);
     padding-left: 8px;
     gap: 10px;
 }
 
+/* Quadrado Rosa */
 .heroWorking img {
     width: 16px;
     height: 16px;
@@ -210,5 +214,72 @@ body {
     font-weight: 600;
 }
 
+
 /* // ---------- Seção - Frase ---------- \\ */
+/* Container da Seção */
+.phraseContainer {
+    width: 1024px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 112px;
+}
+
+/* Container da Frase com o Texto e Imagens */
+.phraseContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: relative;
+}
+
+/* Imagem - Aspas 1 */
+.quotationMarks1 {
+    width: 41.47px;
+    height: 28.7px;
+    position: absolute;
+    top: -14px;
+    left: 166px;
+}
+
+/* Imagem - Aspas 2 */
+.quotationMarks2 {
+    width: 41.47px;
+    height: 28.7px;
+    position: absolute;
+    bottom: -14px;
+    right: 166px;
+}
+
+.phraseContent p {
+    width: 712px;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: var(--white-color);
+    border: 1px solid var(--gray-color);
+}
+
+/* Nome do Autor da Frase - Container */
+.authorPhrase {
+    display: flex;
+    justify-content: end;
+    margin-right: 156px;
+}
+
+.authorPhrase p {
+    width: 162px;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: var(--white-color);
+    border-top: none;
+    border: 1px solid var(--gray-color);
+}
+
+
+/* // ---------- Seção - Projetos ---------- \\ */
 

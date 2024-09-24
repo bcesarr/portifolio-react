@@ -4,20 +4,23 @@ import styles from './App.module.css';
 // Importando images
 import { LogoDefault, LogoOutline, ArrowDown, ArrowUp, IconGithub, IconFigma, IconDribble, ImagePeaple, RectanglePink, Aspas, RectangleOutlineSmall } from './assets/images';
 
-function App() {
-  
+export default function App() {
+
   return (
-    // Utilizamos chaves "{}" ao invés de aspas simples - '' no nome das classes, por que estamos utilizando o "App.modules.css"
+    // "Div" geral do site
+    // Utilizamos chaves "{}" ao invés de aspas simples - '' no nome das classes e, "styles.", por que estamos utilizando o "App.modules.css" e chamando/importando ele pelo nome "styles".
     <div className={styles.portifolioContainer}>
 
+      {/* Header - Topo da Página */}
       <header className={styles.header}>
         <div className={styles.headerTitle}>
-          
+
           <img src={LogoDefault} alt="Imagem do logo" />
-          
+
           <h1>Bruno</h1>
         </div>
 
+        {/* Links do Header */}
         <nav className={styles.nav}>
           <ul>
             <li><a href="#"><span>#</span>home</a></li>
@@ -25,6 +28,7 @@ function App() {
             <li><a href="#"><span>#</span>about-me</a></li>
             <li><a href="#"><span>#</span>contacts</a></li>
 
+            {/* Botão de Idioma */}
             <select>
               <option value="EN">EN</option>
               <option value="PT-BR">PT</option>
@@ -32,59 +36,71 @@ function App() {
             </select>
           </ul>
         </nav>
-      </header>
-
-      <aside className={styles.asideMedia}>
-        <div className={styles.line}></div>
+        
+        {/* Icons ao Lado Esquerdo da Página */}
+        <aside className={styles.asideMedia}>
+          <div className={styles.line}></div>
           <a href="#">
-            <img src={IconGithub} alt="Icone do Github" />  
+            <img src={IconGithub} alt="Icone do Github" />
           </a>
-          
+
           <a href="#">
-            <img src={IconFigma} alt="Icone do Dribble" />  
+            <img src={IconFigma} alt="Icone do Dribble" />
           </a>
 
           <a href="#">
             <img src={IconDribble} alt="Icone do Figma" />
           </a>
-      </aside>
+        </aside>
+        
+      </header>
 
-      <main className={styles.hero}>
-        <section className={styles.heroDescription}>
-          <h2><span>Elias is a</span> web designer <span>and</span> front-end developer</h2>
 
-          <p>He crafts responsive websites where technologies meet creativity</p>
+      {/* Main - Meio do Site */}
+      <main>
 
-          <button type='button'>Contact me!!</button>
-        </section>
+        {/* Hero da Página */}
+        <section className={styles.hero}>
+          {/* Titulo e Descrição do Hero */}
+          <div className={styles.heroDescription}>
+            <h2><span>Elias is a</span> web designer <span>and</span> front-end developer</h2>
 
-        <section className={styles.heroImage}>
-          <img src={ImagePeaple} alt="Imagem de uma pessoa" />
-          <div className={styles.heroWorking}>
-            <img src={RectanglePink} alt="Imagem de um quadrado rosa" />
-            <p>Currently working on <span>Portfolio</span></p>
+            <p>He crafts responsive websites where technologies meet creativity</p>
+
+            <button type='button'>Contact me!!</button>
           </div>
 
+          {/* Imagem do Hero */}
+          <div className={styles.heroImage}>
+            <img src={ImagePeaple} alt="Imagem de uma pessoa" />
+            <div className={styles.heroWorking}>
+              <img src={RectanglePink} alt="Imagem de um quadrado rosa" />
+              <p>Currently working on <span>Portfolio</span></p>
+            </div>
+          </div>
         </section>
+
+        {/* Seção da Frase de Dr. Who */}
+        <section className={styles.phraseContainer}>
+
+          <div className={styles.phraseContent}>
+            <img className={styles.quotationMarks1} src={Aspas} alt="Imagem de aspas" />
+            <p>With great power comes great electricity bill</p>
+            <img className={styles.quotationMarks2} src={Aspas} alt="Imagem de aspas" />
+          </div>
+
+
+          <div className={styles.authorPhrase}>
+            <p>- Dr. Who</p>
+          </div>
+        </section>
+
+        <section className={styles.projects}>
+
+        </section>
+
       </main>
-
-      <section className={styles.phraseContainer}>
-        <img src={Aspas} alt="Imagem de aspas" />
-        
-        <div className={styles.phraseContent}>
-          <p>With great power comes great electricity bill</p>
-        </div>
-
-        <img src={Aspas} alt="Imagem de aspas" />
-
-        <div className={styles.authorPhrase}>
-          <p>- Dr. Who</p>
-        </div>
-
-      </section>
 
     </div>
   );
 }
-
-export default App;
